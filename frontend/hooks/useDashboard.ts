@@ -193,7 +193,7 @@ export function useDashboard() {
   // Helper to normalize status categories
   const getNormalizedStatus = useCallback((statusStr: string): string => {
     if (!statusStr) return "Pending";
-    const s = statusStr.trim().lowerCase?.() || statusStr.trim().toLowerCase();
+    const s = statusStr.trim().toLowerCase();
     if (["completed", "complete", "won", "done"].includes(s)) return "Completed";
     if (["in progress", "inprogress", "active", "executed until current month"].includes(s)) return "In Progress";
     if (["delayed", "overdue", "blocked"].includes(s)) return "Delayed";
