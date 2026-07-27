@@ -1,0 +1,25 @@
+services:
+  # Backend API service
+  - type: web
+    name: skylark-backend
+    env: docker
+    dockerfilePath: backend/Dockerfile
+    dockerContext: backend
+    plan: free
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: MONDAY_API_TOKEN
+        sync: false
+      - key: DEALS_BOARD_ID
+        sync: false
+      - key: WORK_ORDERS_BOARD_ID
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: FORCE_MONDAY_MOCK
+        value: "false"
+      - key: FORCE_OPENAI_MOCK
+        value: "true"
+      - key: CORS_ORIGINS
+        value: "http://localhost:3000,https://skylark-frontend.vercel.app"
