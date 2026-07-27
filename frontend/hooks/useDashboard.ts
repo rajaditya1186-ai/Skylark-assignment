@@ -420,7 +420,6 @@ export function useDashboard() {
       const topStageVal = topStage.value;
       const pct = (topStageVal / max(totalPipe, 1)) * 100;
       if (pct > 40.0) {
-        list.append?.(`Most active pipeline value sits in '${topStage.stage}' stage (${pct.toFixed(0)}% of total).`) ||
         list.push(`Most active pipeline value sits in '${topStage.stage}' stage (${pct.toFixed(0)}% of total).`);
       }
     }
