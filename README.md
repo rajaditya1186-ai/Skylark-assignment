@@ -6,14 +6,6 @@ An analyst-grade business intelligence agent and dashboard hybrid designed for S
 
 ```text
 SkyLark/
-├── Assignment/               # Original planning & rules documents
-│   ├── PRD.md                # Product requirements
-│   ├── Architecture.md       # High-level architecture & lifecycle
-│   ├── rules.md              # AI boundary & data handling constraints
-│   ├── phases.md             # Development roadmap
-│   ├── design.md             # Visual design specifications
-│   └── memory.md             # State tracker & progress log
-│
 ├── backend/                  # FastAPI Backend API
 │   ├── app.py                # Server, routing, cache, and error boundaries
 │   ├── config.py             # Settings validation (Pydantic-Settings)
