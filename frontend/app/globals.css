@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #12161F;
+  --surface: #F5F7FA;
+  --surface-elevated: #EBF0F6;
+  --border: #E2E6ED;
+  --muted-foreground: #5C6478;
+  --accent: #3E6FD9;
+  --accent-foreground: #FFFFFF;
+  --success: #1F9D5C;
+  --warning: #C5860E;
+  --destructive: #D33A31;
+}
+
+.dark {
+  --background: #0B0E14;
+  --foreground: #E6E9F0;
+  --surface: #12161F;
+  --surface-elevated: #1A1F2B;
+  --border: #232837;
+  --muted-foreground: #8B93A7;
+  --accent: #5B8DEF;
+  --accent-foreground: #0B0E14;
+  --success: #3FBE7A;
+  --warning: #E8A93B;
+  --destructive: #E5584F;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border: var(--border);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-destructive: var(--destructive);
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Tabular numbers formatting for numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
